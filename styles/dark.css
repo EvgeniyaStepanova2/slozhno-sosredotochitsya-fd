@@ -1,4 +1,4 @@
-/*
+ /*
   Специально для тёмной темы при наличии класса,
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
@@ -9,4 +9,38 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --background-image: url(../images/cover-image-dark.png);
+    --background-color: #000028;
+    --accent-color: #ff0070;
+    --menu-text-color-rgba: 255, 0, 112;
+    --text-color: #F1B2CE;
+    --menu-text-color: #ff0070;
+    --focus-color: #DB00FF;
+    --header-text-color: #000028;
+    --footer-shadow-color: #FF0070;
+    --decorative-color: #FF0070;
+
+  .decorative-text {
+    display: flex;
+    font-family: var(--main-font);
+    font-size: 18px;
+    color: #FF0070;
+    text-transform: uppercase;
+    justify-self: end;
+    position: absolute;
+    gap: 10px;
+    padding-right: 9px;
+  }
+
+  .decorative-text::after {
+    display: inline-block;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background-color: #FF0070;
+    border-radius: 50%;
+    align-self: center;
+    box-shadow: 0 0 4px 2px #FF0070;
+  }
 }
+
