@@ -10,19 +10,19 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --background-image: url(../images/cover-image-dark.png);
-    --background-color: #000028;
-    --accent-color: #ff0070;
-    --menu-text-color-rgba: 255, 0, 112;
-    --text-color: #F1B2CE;
-    --menu-text-color: #ff0070;
-    --focus-color: #DB00FF;
-    --header-text-color: #000028;
-    --footer-shadow-color: #FF0070;
-    --decorative-color: #FF0070;
+  --background-color: #000028;
+  --accent-color: #ff0070;
+  --menu-text-color-rgba: 255, 0, 112;
+  --text-color: #F1B2CE;
+  --menu-text-color: #ff0070;
+  --focus-color: #DB00FF;
+  --header-text-color: #000028;
+  --footer-shadow-color: #FF0070;
+  --decorative-color: #FF0070;
 
   .decorative-text {
     display: flex;
-    font-family: var(--main-font);
+    font-family: var(--main-font), 'Courier New', monospace;
     font-size: 18px;
     color: #FF0070;
     text-transform: uppercase;

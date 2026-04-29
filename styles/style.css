@@ -3,10 +3,11 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--background-image);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: var(--background-color);
+  background-color: var(--background-color),;
 }
 
 .header {
@@ -22,14 +23,14 @@
 
 .decorative-text {
   display: flex;
-  font-family: var(--main-font);
+  font-family: var(--main-font), 'Courier New', monospace;
   font-size: 18px;
   color: #FF0070;
   text-transform: uppercase;
   justify-self: end;
   position: absolute;
-  margin-top: 10px;
-  margin-right: 10px;
+  top: 10px;
+  right: 10px;
   gap: 10px;
   padding-right: 9px;
 }
@@ -58,7 +59,7 @@
 }
 
 .header__theme-menu-button {
-  font-family: var(--main-font);
+  font-family: var(--main-font), 'Courier New', monospace;
   color: var(--menu-text-color);
   background-color: transparent;
   border: none;
@@ -88,7 +89,7 @@
 
 .header__title {
   color: var(--focus-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), 'Courier New', monospace;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
   line-height: 82.5%;
@@ -97,7 +98,7 @@
 }
 
 .header__description {
-  font-family: var(--main-font);
+  font-family: var(--main-font), 'Courier New', monospace;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -106,12 +107,16 @@
   margin-top: 20px;
 }
 
+.header__description-text {
+  display: block;
+}
+
 .title-decor {
   background-color: var(--accent-color);
   color: var(--header-text-color);
 }
 
-.header::before {
+.decorated-zone::before {
   content: "";
   width: 25px;
   height: 25px;
@@ -121,14 +126,14 @@
   justify-self: end;
 }
 
-.header::after {
+.decorated-zone::after {
   content: "";
   width: 25px;
   height: 25px;
   border: 1px solid var(--menu-text-color);
   border-top: none;
   border-right: none;
-  align-self: self-end;
+  align-self: end;
 }
 
 .cards {
@@ -145,7 +150,7 @@
 .cards__title {
   color: var(--menu-text-color);
   margin-bottom: 20px;
-  font-family: var(--main-font);
+  font-family: var(--main-font), 'Courier New', monospace;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -165,7 +170,7 @@
 }
 
 .article__title {
-  font-family: var(--main-font);
+  font-family: var(--main-font), 'Courier New', monospace;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -174,7 +179,7 @@
 }
 
 .gallery__title {
-  font-family: var(--main-font);
+  font-family: var(--main-font), 'Courier New', monospace;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -182,7 +187,7 @@
 }
 
 .article__title-how {
-  font-family: var(--main-font);
+  font-family: var(--main-font), 'Courier New', monospace;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
@@ -191,10 +196,15 @@
 
 .article__text {
   color: var(--text-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), 'Courier New', monospace;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
+  margin-bottom: 10px;
+}
+
+.article__text:last-child {
+  margin-bottom: 0;
 }
 
 .gallery {
@@ -239,7 +249,7 @@
 .footer-title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--focus-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), 'Courier New', monospace;
   font-weight: 700;
   text-shadow: 2px 2px 0 var(--accent-color);
   text-align: center;
@@ -279,9 +289,7 @@
   }
 
   .header__description {
-    display: flex;
-    justify-content:right;
-    align-self: start;
+    justify-self: end;
     margin-top: 55px;
   }
 
@@ -290,8 +298,8 @@
   }
 
   .decorative-text {
-    margin-top: 20px;
-    margin-right: 20px;
+    top: 20px;
+    right: 20px;
   }
 
   .header__title {
@@ -368,7 +376,7 @@
   }
 
   .footer-title {
-    align-self: end;
+    align-self: center;
     margin-bottom: 35px;
   }
 
