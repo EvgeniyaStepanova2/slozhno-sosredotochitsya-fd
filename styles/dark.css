@@ -1,3 +1,4 @@
+
  /*
   Специально для тёмной темы при наличии класса,
   здесь окажутся стили, которые нужно переопределить принудительно,
@@ -44,3 +45,27 @@
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .decorative-text {
+    display: flex;
+    font-family: var(--main-font), 'Courier New', monospace;
+    font-size: 18px;
+    color: #FF0070;
+    text-transform: uppercase;
+    justify-self: end;
+    position: absolute;
+    gap: 10px;
+    padding-right: 9px;
+  }
+
+  .decorative-text::after {
+    display: inline-block;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background-color: #FF0070;
+    border-radius: 50%;
+    align-self: center;
+    box-shadow: 0 0 4px 2px #FF0070;
+  }
+}

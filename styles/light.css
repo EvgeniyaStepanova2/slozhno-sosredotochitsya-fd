@@ -12,21 +12,20 @@
   --accent-color: #FF8DCB;
   --background-image: url(../images/cover-image-light.png);
   --text-color: #353430;
-  --background-color: #FFF1F7;
   --menu-text-color: var(--text-color);
   --menu-text-color-rgba: 53, 52, 48;
   --focus-color: #FFC2E6;
   --header-text-color: var(--text-color);
   --decorative-color: var(--text-color);
   --footer-shadow-color: #FF0070;
-}
 
-.decorative-text::after {
-  display: none;
-}
+  .decorative-text::after {
+      display: none;
+    }
 
-.decorative-text {
-  display: none;
+    .decorative-text {
+      display: none;
+    }
 }
 
 @media (prefers-color-scheme: light) {
@@ -42,30 +41,13 @@
     --header-text-color: #353430;
     --decorative-color: #353430;
     --footer-shadow-color: #FF0070;
-  }
-}
 
-@media (prefers-color-scheme: dark) {
-  .decorative-text {
-    display: flex;
-    font-family: var(--main-font), 'Courier New', monospace;
-    font-size: 18px;
-    color: #FF0070;
-    text-transform: uppercase;
-    justify-self: end;
-    position: absolute;
-    gap: 10px;
-    padding-right: 9px;
-  }
+    .decorative-text::after {
+      display: none;
+    }
 
-  .decorative-text::after {
-    display: inline-block;
-    content: "";
-    width: 9px;
-    height: 9px;
-    background-color: #FF0070;
-    border-radius: 50%;
-    align-self: center;
-    box-shadow: 0 0 4px 2px #FF0070;
+    .decorative-text {
+      display: none;
+    }
   }
 }
